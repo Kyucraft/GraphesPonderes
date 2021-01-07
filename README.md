@@ -11,13 +11,13 @@ class PriorityQueue:
   on défile le premier élément après rangement selon l'ordre sur les poids
   '''
 
-  def __init__(self, taille: int, fill: Tuple(T,int), ord: str):
+  def __init__(self, taille: int, fill: T, ord: str):
       #ordre est soit croissant ('ASC'), soit décroissant ('DESC')
       assert ord in ['ASC', 'DESC']
       if ord == 'ASC':
-          self.fill = ("",float('inf')) #plus grand que tout nombre
+          self.fill = (fill,float('inf')) #plus grand que tout nombre
       else:
-          self.fill = ("",0)
+          self.fill = (fill,0)
       pass
   
   def est_vide(self)->bool:
