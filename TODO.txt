@@ -1,4 +1,8 @@
 Graphes pondérés :
 Parcours en largeur:
 
-1) Coder un graphe pondéré ( + méthode)
+1) Coder un graphe pondéré ( + méthode : si u,v voisins --> long.arête)
+2) FIle de priorité : 
+            - Enfiler
+            - maj_ordre
+            - defiler
