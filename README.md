@@ -1,22 +1,16 @@
-# GraphesPonderes
-
-pour le codage de graphe pondéré, utiliser le codage suivant : 
-(version graphe orienté pour faire simple)
+Coder votre algo sans attendre le tavail des copains (ça sert à ça l'abstraction)
 ```python
-arete={'a':{'b':2, 'c':7}, 'b':{'c':3}, 'c':{}}
+#parcours_largeur_graphe_pond
+from priority_queue import *
+from graphe_pondere import *
+from tree import *
+
+#your code
 ```
-Du coup pour savoir la longueur d'une arête, si elle existe :
 
-`arete[s][t]`.
+plutôt que d'avoir deux fonctions parcours, une qui renvoie les dictionnares et l'autre l'arbre de paroours, en écrire une seule
+qui renvoie les trois, on prend ce qu'on veut !
 
-On peut imaginer une méthode 
-```python
-def longueur_arete(self,s,t):
-  '''
-  renvoie la longueur de l'aréte entre deux sommets s et t du graphe
-  Exception KeyError levée si il n'y a pas d'arête.
-  à utiliser avec un try:... except KeyError:...
-  '''
-  assert self.contient(s)
-  assert self.contient(t)
-  return self.arete[s][t]
+je vais écrire les interfaces des classes PriorityQueue et GraphePondere, comme ça vous avez les noms et les spécifications des méthodes. Pas la peine d'attendre leur implémentation pour écrire l'alo ;D 
+
+Bon travail
