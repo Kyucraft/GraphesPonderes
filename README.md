@@ -11,6 +11,6 @@ from tree import *
 plutôt que d'avoir deux fonctions parcours, une qui renvoie les dictionnares et l'autre l'arbre de paroours, en écrire une seule
 qui renvoie les trois, on prend ce qu'on veut !
 
-je vais écrire les interfaces des classes PriorityQueue et GraphePondere, comme ça vous avez les noms et les spécifications des méthodes. Pas la peine d'attendre leur implémentation pour écrire l'alo ;D 
+je vais écrire les interfaces des classes PriorityQueue et GraphePondere, comme ça vous avez les noms et les spécifications des méthodes. Pas la peine d'attendre leur implémentation pour écrire l'algo ;D 
 
 Bon travail
