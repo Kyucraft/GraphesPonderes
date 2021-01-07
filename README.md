@@ -1,22 +1,45 @@
-# GraphesPonderes
+#PriorityQueue
 
-pour le codage de graphe pondéré, utiliser le codage suivant : 
-(version graphe orienté pour faire simple)
 ```python
-arete={'a':{'b':2, 'c':7}, 'b':{'c':3}, 'c':{}}
+from typing import TypeVar, Tuple, List
+
+T = TypeVar('T')
+
+class PriorityQueue:
+  '''
+  une file d'elem (val, poids), un ordre (croissant ou décroissant)
+  on défile le premier élément après rangement selon l'ordre sur les poids
+  '''
+
+  def __init__(self, taille: int, fill: Tuple(T,int), ord: str):
+      #ordre est soit croissant ('ASC'), soit décroissant ('DESC')
+      assert ord in ['ASC', 'DESC']
+      pass
+  
+  def est_vide(self)->bool:
+      pass
+    
+  def enfiler(self,val: Tuple[T,int])-> None:
+      pass
+  
+  def defiler(self)->Tuple[T,int]:
+      assert not(self.est_vide())
+      self._maj_prio()
+      #renvoyer le premier eleme dans l'ordre (avec son poids !)
+      
+  def _maj_prio(self):
+      #trie les elem enfilés en fonction de leur poids selon ord
+     
+
+f = PriorityQueue(10, "", 'ASC')
+f.enfiler(('a', 5))
+f.enfiler(('b', 3))
+f.enfiler(('c', 1))
+assert f.defiler() == ('c', 1)
+
+f = PriorityQueue(10, "", 'DESC')
+f.enfiler(('a', 5))
+f.enfiler(('b', 3))
+f.enfiler(('c', 1))
+assert f.defiler() == ('a', 5)
 ```
-Du coup pour savoir la longueur d'une arête, si elle existe :
-
-`arete[s][t]`.
-
-On peut imaginer une méthode 
-```python
-def longueur_arete(self,s,t):
-  '''
-  renvoie la longueur de l'aréte entre deux sommets s et t du graphe
-  Exception KeyError levée si il n'y a pas d'arête.
-  à utiliser avec un try:... except KeyError:...
-  '''
-  assert self.contient(s)
-  assert self.contient(t)
-  return self.arete[s][t]
