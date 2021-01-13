@@ -41,7 +41,7 @@ class PriorityQueue:
       return (defil_result) 
       
   def _maj_prio(self):
-      #kliklou ak arouf
+      #kliklou
       n = list(filter(lambda x:type(x)==float,self.fill))
       y = list(filter(lambda x:type(x)==int,self.fill))
       y.sort()
