@@ -21,18 +21,35 @@ class PriorityQueue:
       pass
   
   def est_vide(self)->bool:
-      pass
+      if self.fill == ():
+          return True
+      return False
     
   def enfiler(self,val: Tuple[T,int])-> None:
-      pass
-  
-  def defiler(self)->Tuple[T,int]:
-      assert not(self.est_vide())
-      self._maj_prio()
-      #renvoyer le premier eleme dans l'ordre (avec son poids !)
+      self.fill += val[0],val[1]
+      return None     
+
+    def defiler(self)->Tuple[T,int]:
+        assert not(self.est_vide())
+        n = self._maj_prio()
+        defil_result = (self.fill[n-1] ,self.fill[n])
+        self.fill = self.fill[:n-1]  + self.fill[n+1:]
+        print(defil_result)
+        return (defil_result) 
       
   def _maj_prio(self):
-      list(filter(lambda x:type(x)=='int',self.fill))#marche pas jsp pourquoi
+        n = list(filter(lambda x:type(x)==float,self.fill))
+        y = list(filter(lambda x:type(x)==int,self.fill))
+        y.sort()
+        if self.ord == 'ASC':
+            for i in range(len(n)):
+                y.append(n[i])
+            print(y)
+            return self.fill.index(min(y))
+        else:
+            y.reverse
+            return self.fill.index(max(y))
+
       #trie les elem enfilés en fonction de leur poids selon ord
      
 
