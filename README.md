@@ -32,6 +32,7 @@ class PriorityQueue:
       #renvoyer le premier eleme dans l'ordre (avec son poids !)
       
   def _maj_prio(self):
+      list(filter(lambda x:type(x)=='int',self.fill))#marche pas jsp pourquoi
       #trie les elem enfilés en fonction de leur poids selon ord
      
 
