@@ -9,11 +9,7 @@ class PriorityQueue:
         #ordre est soit croissant ('ASC'), soit décroissant ('DESC')
         assert ord in ['ASC', 'DESC']
         self.ord=ord
-        if ord == 'ASC':
-            self.fill = (fill,float('inf')) #plus grand que tout nombre
-        else:
-            self.fill = (fill,0)
-        pass
+        self.fill = fill
     
     def est_vide(self)->bool:
         return len(self.fill) == 0
@@ -25,24 +21,22 @@ class PriorityQueue:
     def defiler(self)->Tuple[T,int]:
         #kliklou
         assert not(self.est_vide())
-        n = self._maj_prio()
-        defil_result = (self.fill[n-1] ,self.fill[n])
-        self.fill = self.fill[:n-1]  + self.fill[n+1:]
-        print(defil_result)
-        return (defil_result) 
+        self._maj_prio()
+        pass
+
+    def maj_sommet(self,sommet,val):
+        for i in self.fill:
+            v,x = self.fill[i]
+            if v==sommet:
+                self.fill.append((sommet,val))
+                
+                
         
     def _maj_prio(self):
         #kliklou
-        n = list(filter(lambda x:type(x)==float,self.fill))
-        y = list(filter(lambda x:type(x)==int,self.fill))
-        y.sort()
-        if self.ord == 'ASC':
-            for i in range(len(n)):
-                y.append(n[i])
-            return self.fill.index(min(y))
-        else:
-            y.reverse
-            return self.fill.index(max(y))
+        self.fill = sorted(self.fill)
+        if self.ord == 'DESC':
+            self.fill.reverse()
         #trie les elem enfilés en fonction de leur poids selon ord
      
 
