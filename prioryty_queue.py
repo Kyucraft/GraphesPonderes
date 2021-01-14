@@ -16,14 +16,10 @@ class PriorityQueue:
         pass
     
     def est_vide(self)->bool:
-        #kliklou
-        print(self.fill)
-        if self.fill == ():
-            return True
-        return False
+        return len(self.fill) == 0
         
     def enfiler(self,val: Tuple[T,int])-> None:
-        #kliklou
+        #Kyucraft
         self.fill.append(val)   
 
     def defiler(self)->Tuple[T,int]:
