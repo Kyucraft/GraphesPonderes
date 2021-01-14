@@ -42,6 +42,7 @@ fct parcours_largeur_pond(G,s_i):
                         f.enfiler((v,distance[v]))
 '''
 
+
 from priority_queue import *
 from graphe_pondere import *
 from tree import *
@@ -51,15 +52,14 @@ def parcours_largeur_pond(self,s_i):
     #Ici, self apparaît comme une variable muette, mais tout est déjà configuré de sorte à ce qu'il suffise de coller la 
     #fonction dans graphe_pondere.py
 
-    f = PriorityQueue(1000,"",'ASC')  
-    #1000 sera sans doute remplacé par self.taille() que l'équipe se chargeant de la Class Graphe_Pond devrait ajouter  
+    f = PriorityQueue(self.taille(),"",'ASC')   
     couleur = {}
     distance = {}
     parents = {}
 
     for s in self.arete:
         couleur[s] = "blanc"
-        distance[s] = 0
+        distance[s] = "infini"
         parent[s] = None
 
     couleur[s_i] = "gris"
