@@ -2,4 +2,4 @@ File de priorité : Alban // Ioen // Killian // Justin
 
 Codage graphes pondérés : Celyan, Tom, Nathan, Emmanuel
 
-Tests : Joris, Thibaut, IliasDePique
+Tests : Joris, Thibaut, Ilias
