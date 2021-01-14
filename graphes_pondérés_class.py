@@ -44,3 +44,19 @@ class Graphe_pondere:
 
     def existe(self,s):
         return s in self.vois.keys()
+
+    def liste_distance_arette(self)-> list:
+        keys = list(self.vois.keys())
+        double = []
+        liste = []
+        for i in range(len(keys)):
+            dico = self.vois[keys[i]]
+            keys_dico = dico.keys()
+            for k in keys_dico:
+                if (k+keys[i]) not in double:
+                    double += [keys[i]+k]
+                    liste += [(keys[i],k,dico[k])]
+        return liste
+             
+
+            
