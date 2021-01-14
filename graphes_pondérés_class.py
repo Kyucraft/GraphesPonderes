@@ -7,6 +7,9 @@ class Graphe_pondere:
         for i in list(self.vois.keys()):
             nouveau_dict[i] = self.vois[i]
         return(f"{nouveau_dict}")
+    
+    def taille(self):
+        return len(self.vois.keys())
 
     def ajouter_sommet(self,sommet,liens):
         self.vois[sommet] = liens
