@@ -14,6 +14,7 @@ class PriorityQueue:
   def __init__(self, taille: int, fill: T, ord: str):
       #ordre est soit croissant ('ASC'), soit décroissant ('DESC')
       assert ord in ['ASC', 'DESC']
+      self.ord=ord
       if ord == 'ASC':
           self.fill = (fill,float('inf')) #plus grand que tout nombre
       else:
