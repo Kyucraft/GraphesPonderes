@@ -2,7 +2,7 @@
 
 ```python
 from typing import TypeVar, Tuple
-
+#Salut La clique
 T = TypeVar('T')
 
 class PriorityQueue:
