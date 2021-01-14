@@ -19,17 +19,18 @@ class PriorityQueue:
         self.fill.append(val)   
 
     def defiler(self)->Tuple[T,int]:
-        #kliklou
-        assert not(self.est_vide())
-        self._maj_prio()
-        pass
+        assert not(self.fill.est_vide())
+        self.fill._maj_prio()
+        defil_result = self.fill[0]
+        self.fill.pop[0] 
+        return (defil_result) 
 
     def maj_sommet(self,sommet,val):
         for i in self.fill:
             v,x = self.fill[i]
             if v==sommet:
                 self.fill.append((sommet,val))
-                
+        pass
                 
         
     def _maj_prio(self):
