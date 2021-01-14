@@ -16,17 +16,16 @@ class PriorityQueue:
           self.fill = (fill,float('inf')) #plus grand que tout nombre
       else:
           self.fill = (fill,0)
-      pass
+      self.taille = taille
   
   def est_vide(self)->bool:
-      #kliklou
-      if self.fill == ():
-          return True
-      return False
+      #killian
+      return self.taille == 0
     
   def enfiler(self,val: Tuple[T,int])-> None:
       #kliklou
       self.fill += val[0],val[1]
+      self.taille += 1
       return None     
 
   def defiler(self)->Tuple[T,int]:
