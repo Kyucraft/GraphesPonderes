@@ -11,4 +11,4 @@ print(g)
 g.supprimer_sommet('d')
 print(g)
 """
-print(g.liste_distance_arètte())
+print(g.liste_distance_arette())

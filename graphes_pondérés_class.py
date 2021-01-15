@@ -47,6 +47,7 @@ class Graphe_pondere:
 
     def liste_distance_arette(self)-> list:
         keys = list(self.vois.keys())
+        liste_trier = []
         double = []
         liste = []
         for i in range(len(keys)):
@@ -56,7 +57,15 @@ class Graphe_pondere:
                 if (k+keys[i]) not in double:
                     double += [keys[i]+k]
                     liste += [(keys[i],k,dico[k])]
-        return liste
+        for item in liste:
+            for elem in range(len(liste_trier)):
+                if liste_trier[elem][2] > item[2] and (item) not in liste_trier:
+                    liste_trier[:elem] += [item]
+                elif (elem)+1 == len(liste_trier) and (item) not in liste_trier:
+                    liste_trier[elem:] += [item]
+            if len(liste_trier) == 0:
+                liste_trier += [item]
+        return liste_trier
              
 
             
