@@ -4,7 +4,7 @@
 fct parcours_largeur_pond(G,s_i):
 
     ##### comme c'est un algorithme, il n'est pas vraiment écrit comme une méthode. #####
-    ##### cet algo ne couvre pas la partie sur la réalisation de l'arbre. Seulement les dicts parent et distance #####
+    ##### cet algo ne couvre pas la partie sur la réalisation de l'arbre. Seulement les dicts parents et distance #####
 
     file = PriorityQueue()
     couleur = {}
