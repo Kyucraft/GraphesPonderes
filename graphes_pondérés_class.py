@@ -50,6 +50,7 @@ class Graphe_pondere:
         liste_trier = []
         double = []
         liste = []
+        liste_finale = []
         for i in range(len(keys)):
             dico = self.vois[keys[i]]
             keys_dico = dico.keys()
@@ -65,7 +66,7 @@ class Graphe_pondere:
                     liste_trier[elem:] += [item]
             if len(liste_trier) == 0:
                 liste_trier += [item]
-        return liste_trier
-             
-
-            
+        for i in range(len(liste_trier)):
+            x,y,value = liste_trier[i]
+            liste_finale.append([x,y])
+        return liste_finale
