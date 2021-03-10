@@ -81,7 +81,7 @@ def parcours_largeur_pond(self,s_i):
 
  
                         f.maj_sommet((v,distance[v]))
-                        #ATTENTION ! Cette ligne, à l'heure où le code est publié, n'est pas fonctionnel. En attente d'une modification de la fonction
+                        #ATTENTION ! Cette ligne, à l'heure où le code est publié, n'est pas fonctionnelle. En attente d'une modification de la fonction
                         #de la part de l'équipe travaillant sur 'priority_queue.py'
 
     
@@ -91,7 +91,7 @@ def parcours_largeur_pond(self,s_i):
     #return distance,parents
 
 
-def generer_arbre_podere(self,s,d,p):
+def generer_arbre_pondere(self,s,d,p):
     #Ici, self apparaît comme une variable muette, mais tout est déjà configuré de sorte à ce qu'il suffise de coller la 
     #fonction dans graphe_pondere.py
 
