@@ -81,7 +81,7 @@ class Tree:
 
     #La fonction provient de 'graphepond_integration.py. Elle n'est copiée ici qu'à des fins de tests !!!
     '''
-    def generer_arbre_podere(self,s,d,p):
+    def generer_arbre_pondere(self,s,d,p):
         
 
         tab_sommets = [s]
@@ -161,6 +161,6 @@ distance = {
 }
 
 arbre.afficher()
-arbre.generer_arbre_podere("a",distance,parents)
+arbre.generer_arbre_pondere("a",distance,parents)
 arbre.afficher()
 '''
