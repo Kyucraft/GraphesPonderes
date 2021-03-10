@@ -1,5 +1,7 @@
 La fonction 'parcours_largeur_pond()' prend deux éléments en Entrée:
+
   -> self, soit le graphe pondéré (puisqu'il s'agit d'une fonction qui sera ajoutée dans la class éponyme).
+  
   -> s_i, soit le sommet à partir duquel on souhaite effectuer la fonction.
   
 
