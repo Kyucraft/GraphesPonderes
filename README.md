@@ -16,6 +16,8 @@ En sortie, la fonction PEUT retourner :
   
   -> arbre_pond, l'arbre pondéré correspondant au graphe, qui est généré par une seconde fonction, la fonction 'generer_arbre_pondere()'
   
+  ==> Les éléments retournés peuvent être modifiés selon ce que l'on cherche à faire dans le cadre d'une utilisation concrète de cette fonction.
+  
   
 ---------------
 ---------------
