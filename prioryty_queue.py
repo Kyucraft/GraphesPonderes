@@ -15,14 +15,14 @@ class PriorityQueue:
         return len(self.fill) == 0
         
     def enfiler(self,val: Tuple[T,int])-> None:
-        #Kyucraft
+        #Kiklou
         self.fill.append(val)   
 
     def defiler(self)->Tuple[T,int]:
-        assert not(self.fill.est_vide())
-        self.fill._maj_prio()
+        assert not(self.est_vide())
+        self._maj_prio()
         defil_result = self.fill[0]
-        self.fill.pop[0] 
+        self.fill.pop(0) 
         return (defil_result) 
 
     def maj_sommet(self,sommet,val):
@@ -41,15 +41,14 @@ class PriorityQueue:
         #trie les elem enfilés en fonction de leur poids selon ord
      
 
-f = PriorityQueue(10, "", 'ASC')
+f = PriorityQueue(10, [], 'ASC')
 print(f.est_vide())
 f.enfiler(('a', 5))
 f.enfiler(('b', 3))
 f.enfiler(('c', 1))
-assert f.defiler() == ('c', 1)
 
-f = PriorityQueue(10, "", 'DESC')
+
+f = PriorityQueue(10, [], 'DESC')
 f.enfiler(('a', 5))
 f.enfiler(('b', 3))
 f.enfiler(('c', 1))
-assert f.defiler() == ('a', 5)
