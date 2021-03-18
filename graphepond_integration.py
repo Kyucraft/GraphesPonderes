@@ -48,45 +48,34 @@ def parcours_largeur_pond(self,s_i):
     couleur = {}
     distance = {}
     parents = {}
-
     for s in self.vois:
         couleur[s] = "blanc"
         distance[s] = "infini"
         parent[s] = None
-
     couleur[s_i] = "gris"
     distance[s_i] = 0
     parent[s_i] = None
-
     f.enfiler((s_i,0))
-
     while not(f.est_vide()):
         n = f.defiler()
         val,dis = n
         couleur[val] = "noir"
-
         for v in self.vois[val]:
             if couleur[v] != "noir":
                 if couleur[v] == "blanc":
                     couleur[v] = "gris"
                     distance[v] = distance[val] + self.longueur_arete(val,v)
                     parents[v] = val
-
                     f.enfiler((v,distance[v]))
-
                 elif couleur[v] == "gris":
+                    #revoir la condition avec un ' <= '
                     if distance[val] + self.longueur_arete(val,v) < distance[v]:
                         distance[v] = distance[val] + self.longueur(val,v)
-                        parents[v] = val
-
- 
+                        parents[v] = val    #changer en liste (.append)
                         f.maj_sommet((v,distance[v]))
                         #ATTENTION ! Cette ligne, à l'heure où le code est publié, n'est pas fonctionnelle. En attente d'une modification de la fonction
                         #de la part de l'équipe travaillant sur 'priority_queue.py'
-
-    
     arbre_pond = self.generer_arbre_podere(s_i,distance,parents)
-
     return arbre_pond
     #return distance,parents
 
