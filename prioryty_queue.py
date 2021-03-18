@@ -39,6 +39,7 @@ class PriorityQueue:
         self.fill.pop(0) 
         return (defil_result) 
 
+
     def maj_sommet(self,sommet,val):
         '''
         Sert a rajouter une nouvelle valeur dans la queue
@@ -48,6 +49,10 @@ class PriorityQueue:
             if v==sommet:
                 self.fill.append((sommet,val))
         pass
+
+
+        #création d'un dictionnaire correspondant au contenu de self.fill, puis
+        #modification du dico et recréation en liste
                 
         
     def _maj_prio(self):
